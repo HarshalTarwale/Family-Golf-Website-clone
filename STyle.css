@@ -1,0 +1,726 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FONT */
+
+body{
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* z-index: 1; */
+}
+
+/* BUTTON ANIMATION ---------------------------------------------*/
+
+.uni-btn{
+    border: 2px solid #95C11E;
+    border-radius: 60px;
+    padding: 15px 40px;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    font-size: 2.2vh;
+    transition: ease-out 0.3s;
+}
+
+.uni-btn:hover{
+    background-color: #95C11E;
+    color: black;
+    
+}
+
+/* CURCOR ------------------------------------------------------ */
+
+#cursor{
+    background-color: #95C11E;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+    transform: translate(-50%, -50%); 
+}
+
+#cursor-blur{
+    background-color: #96c11e5e;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    filter: blur(90px);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    /* Uses a transition for the slow-following effect */
+    transition: all 0.2s linear;
+    /* pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition:  ease-out; */
+}
+
+/* MAIN ----------------------------------------------------------------------------- */
+#main{
+    /* z-index: 1; */
+}
+
+
+/* HERO SECTION --------------------------------------------------------- */
+
+#hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    /* z-index: 10; */
+}
+
+.hero-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+.hero-container{
+    /* z-index: 1; */
+    position: relative;
+}
+
+/* NAV--------------- */
+
+nav{
+    display: flex;
+    height: 120px;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 135px;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    position: fixed;
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+.left-nav img{
+    height: 80px;
+    width: auto;
+}
+.left-nav h4{
+    font-size: 2vh;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.right-nav{
+    display: flex;
+    gap: 10px;
+}
+.right-nav button{
+    /* border: 2px solid #95C11E;
+    border-radius: 60px;
+    padding: 15px 40px;
+    font-size: 2.2vh;
+    color: white;
+    background-color: black;
+    text-transform: uppercase; */
+}
+
+/* HEADING--------------------- */
+
+.hero-headings{
+    position:relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28vh;
+}
+.hero-headings h1{
+    font-size: 13vh;
+    font-weight: 1000;
+    /* text-transform: uppercase; */
+    /* line-height: .86; */
+    letter-spacing: .02em;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 9;
+}
+.hero-headings h1::before{
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+
+.hero-headings h3{
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    font-weight: 800;
+    z-index: 9;
+}
+.hero-headings p{
+    font-size: 2.5vh;
+    max-width: 85vh;
+    line-height: 1.375;
+    /* margin: 1rem auto 0; */
+    text-align: center;
+    z-index: 11;
+}
+
+/* ARROW ----------------------------------- */
+
+#arrow{
+    background-color: transparent;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border: 3px solid #95C11E;
+    transition: all 0.5s ease;
+    margin-top: 80px;
+    position: absolute;
+    left: -70px;
+    cursor: pointer;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+#arrow:hover{
+    transform: scale(0.3); /* Makes the arrow smaller (80% of original size) */
+    background-color: #95C11E;
+}
+
+#arrow i {
+    pointer-events: none; /* Ensures the icon itself doesn't interfere with hover */
+}
+
+/* PAGE 2 ------------------------------------------------------------------------------ */
+
+#Page2{
+    min-height: 100vh;
+    width: 100%;
+    /* z-index: ; */
+}
+
+/* SCROLLER--------------- */
+
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 9;
+    
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 130px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    /* font-family: gilroy; */
+    font-weight: 900;
+    color: black;
+    -webkit-text-stroke: 2px white;
+    transition: color 0.1s ;
+    cursor: pointer;
+}
+#scroller h4:hover{
+    color: #95C11E;
+    -webkit-text-stroke: transparent;
+    
+}
+
+#scroller-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+/* ABOUT US ---------------------------- */
+
+#about{
+    /* background-color: red; */
+    display: flex;
+    margin-top: 120px;
+    padding: 0px 120px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+    gap: 130px;
+}
+#about img{
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+    /* margin-top: 40px; */
+}
+
+.about-disc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-disc h1{
+    font-size: 7vh;
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+.about-disc p{
+    font-size: 2.5vh;
+    /* text-transform: uppercase; */
+    text-align: center;
+    line-height: 2;
+    margin-top: 20px;   
+}
+
+/* CARDS-------------------------- */
+
+#cards-container{
+    /* background-color: gray; */
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 135px;
+    gap: 15px;
+    position: relative;
+    z-index: 9;
+}
+
+.cards{
+    /* background-color: red; */
+    height: 60%;
+    width: 30%;
+    border-radius: 25px;
+    position: relative;
+    background-size: cover;
+    background-position: center ;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+.cards h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-left: 30px;
+    margin-top: 87%;
+    font-size: 3.7vh;
+    position: absolute;
+    
+}
+
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-ag.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    /* border-radius: 25px; */
+    padding: 80px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: black;
+    transition: all ease 0.6s;
+    opacity: 0;
+    position: absolute;
+}
+.overlay h2{
+    font-size: 42px;
+    font-weight: 600;
+}
+.overlay p{
+    text-align: center;
+    font-size: 18px;
+}
+.cards:hover .overlay{
+    opacity: 1;
+}
+.cards:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+
+/* SING-UP --------------------------------------- */
+
+.singup-container{
+    height: 40vh;
+    width: 100%;
+    /* background: linear-gradient(to left bottom, #95C11E , ) ; */
+    background-color: #95C11E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    z-index: 9;
+}
+.singup-container img{
+    height: 600px;
+    width: px;
+    opacity: 60%;
+}
+.invertimg{
+    transform: scaleX(-1);
+}
+.singup-container h3{
+    color: black;
+    font-size: 4vh;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* PAGE 3 ---------------------------------------------------------------------------- */
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* IMAGE SCROLLER ---------------------------- */
+
+/* #image-scroller{
+    background-color: gray;
+    height: 50vh;
+    margin-top: 160px;
+
+}
+#img-scroller{
+    background-color: rgba(255, 0, 0, 0.375);
+    height: 70%;
+} */
+
+/* // FOOD AND DRINK ------------------------------- */
+
+#food{
+    height: 60vh;
+    width: 100%;
+    /* background-color: gray; */
+    margin-top: 160px;
+    display: flex;
+    align-items: center;
+    padding: 70px 180px;
+    justify-content: center;
+}
+
+#food-container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 80px;
+    position: relative;
+    z-index: 9;
+}
+#food-container img{
+    height: 500px;
+    /* width: auto; */
+    border-radius: 25px;
+}
+
+.food-disc{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+.food-disc h1{
+    font-size: 6.5vh;
+    font-weight: 900;
+    margin-top: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.food-disc p{
+    text-align: left;
+    font-size: 2.3vh;
+    line-height: 1.5;
+    width: 36vw;
+    text-transform: uppercase;
+}
+
+.food-disc button{
+    /* font-size: 2.2vh;
+    text-transform: uppercase; */
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+
+/* // COLEN DISCCRIPTION -----------------------*/
+
+#comasec{
+    margin-top: 250px;
+    /* background-color: gray; */
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 9;
+
+}
+#comasec>p{
+    font-size: 31px;
+    font-weight: 900;
+    width: 60%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.7;
+}
+#comasec img{
+    position: absolute;
+    height: 50px;
+}
+#colon1{
+    left: 16%;
+    top: 5%;
+}
+#colon2{
+    right: 16%;
+    bottom: 5%;
+}
+
+/* PAGE 4 --------------------------------------------------------------------------------- */
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+}
+
+/* IMAGE CONTAINER------------------------ */
+
+
+#img-container{
+    height: 50%;
+    width: 100%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    padding: 170px;
+    position: relative;
+    margin-top: 50px;
+}
+
+#img-container h1{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 80PX;
+    font-weight: 800;
+    color: black;
+    -webkit-text-stroke: 1px white;
+    /* color: transparent; */
+    top: 50px;
+    z-index: 9;
+}
+
+.elem{
+    height: 200px;
+    width: 500px;
+    background-color: #95C11E;
+    border-radius: 25px;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    z-index: 9;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.5;
+    opacity: 0;
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    transition: opacity 0.5s ease;
+   
+}
+.elem h2{
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 900;
+    z-index: 2;
+    transition: color 0.6s ease;
+}
+
+.elem:hover img{
+    opacity: 1;
+    scale: 1;
+}
+
+/* .elem:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+} */
+
+.elem:hover h2{
+    color: white;
+}
+
+/* FOOTER --------------------------------------------------------------- */
+
+#footer{
+    height: 50%;
+    width: 100%;
+    background-color: #95C11E;
+    display: flex;
+    position: relative;
+    /* justify-content: center; */
+    padding-left: 150px;
+    overflow: hidden;
+
+}
+
+.fimage{
+    position: absolute;
+    z-index: 8;
+    height: 100vh;
+    left: 0px;
+    opacity: 30%;
+    object-fit: cover;
+    
+}
+
+#footer-container{
+    position: relative;
+    z-index: 9;
+}
+
+#top{
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
+    gap: 50px;
+    z-index: 9;
+}
+#logos{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.icons{
+    display: flex;
+    gap: 15px;
+}
+.icons i{
+    color: black;
+    font-size: 35px;
+}
+
+#logos img{
+    height: 115px;
+}
+
+#top h2{
+    font-size: 38px;
+    /* width: 430px; */
+    text-transform: uppercase;
+    font-weight: 800;
+    color: black;
+}
+
+#bottom{
+    color: black;
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 90px;
+}
+
+.a20 p{
+    color: black;
+    text-transform: uppercase;
+    /* width: 230px; */
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.a20 h3{
+    text-transform: uppercase;
+    color: black;
+    font-size: 26px;
+    font-weight: 800;
+
+}
+
+
+
+
