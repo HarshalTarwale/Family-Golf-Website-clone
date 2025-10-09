@@ -1,35 +1,3 @@
-// smooth scroll ---------------------
-
-// import LocomotiveScroll from 'locomotive-scroll';
-
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('#main'),
-//     smooth: true
-// });
-
-// CURSOR ----------------------------
-// var cursorBlur = document.querySelector("#cursor-blur")
-// var curs = document.querySelector("#cursor");
-// document.addEventListener("mousemove", function(deta){
-//     curs.style.left = deta.clientX+ "px";
-//     curs.style.top = deta.clientY+ "px";
-//     cursorBlur.style.left = event.clientX + "px";
-//     cursorBlur.style.top = event.clientY + "px";
-// })
-
-// document.addEventListener("mousemove", function(e) {
-//   const cursor = document.querySelector("#cursor");
-//   const cursorBlur = document.querySelector("#cursor-blur");
-
-//   // Update the position of the main cursor
-//   cursor.style.left = e.clientX + 'px';
-//   cursor.style.top = e.clientY + 'px';
-
-//   // Update the position of the blur effect
-//   cursorBlur.style.left = e.clientX + 'px';
-//   cursorBlur.style.top = e.clientY + 'px';
-// });
-
 // CURSOR SMOOTHING ----------------------------
 let mousePosX = 0;
 let mousePosY = 0;
@@ -95,21 +63,6 @@ function initCursor() {
 
 // Initialize the cursor when the page loads
 window.addEventListener("load", initCursor);
-
-// var headings = document.querySelectorAll("#main h3, #main h4, #main h5");
-// headings.forEach(function(elem){
-//     elem.addEventListener("mouseenter", function(){
-//         document.querySelector("#cursor").style.scale = 2;
-//         document.querySelector("#cursor").style.border = "1px solid #95C11E";
-//         document.querySelector("#cursor").style.backgroundColor = "transparent";
-//     });
-    
-//     elem.addEventListener("mouseleave", function(){
-//         document.querySelector("#cursor").style.scale = 1;
-//         document.querySelector("#cursor").style.border = "0px";
-//         document.querySelector("#cursor").style.backgroundColor = "#95C11E";
-//     });
-// });
 
 // NAV SCROLL EFFECT------------------
 
@@ -216,5 +169,11 @@ gsap.from("#img-container h1",{
         scrub:2
     }
 })
+
+//Smooth scrolling ------------------------------------------
+
+const lenis = new Lenis({
+  autoRaf: true,
+});
 
 
